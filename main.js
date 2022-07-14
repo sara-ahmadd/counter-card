@@ -1,5 +1,6 @@
 let counter = document.getElementById("count");
 let countBtn = document.querySelector('[name = "count"]');
+let countDownBtn = document.querySelector("#count-down");
 let saveBtn = document.querySelector('[name = "save"]');
 let resetBtn = document.querySelector('[name = "reset"]');
 
@@ -8,6 +9,12 @@ counter.innerText = 0;
 countBtn.addEventListener("click", () => {
   let num = parseInt(counter.innerText);
   sum = num + 1;
+  counter.innerText = sum;
+});
+
+countDownBtn.addEventListener("click", () => {
+  let num = parseInt(counter.innerText);
+  sum = num - 1;
   counter.innerText = sum;
 });
 
